@@ -1,0 +1,5 @@
+14-05-2023	10:09:31	6e0d5ac5-47f5-47a2-8ba3-42b121b88015	Error	Not allowed by CORS
+14-05-2023	11:38:31	f41891d0-9c10-400c-9dd1-9fb130e71ff7	Error	ENOENT: no such file or directory, stat 'D:\Abid\Web development Dave Gray\nodejs\server\Routes\views\index.html'
+18-05-2023	10:42:54	2e19d067-c095-47ed-b82a-6ec6a5e15e6f	TypeError	data.employees.findAll is not a function
+01-06-2023	19:58:38	7b650e14-07d0-4183-91e6-952aeb3e228f	TypeError	req.sendStatus is not a function
+01-06-2023	19:59:17	6f2bbe7d-7b65-4e10-9e1f-34e1ecd903c0	TypeError	req.sendStatus is not a function
