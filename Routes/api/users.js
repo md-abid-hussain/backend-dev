@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.route('/')
     .get(verifyRoles(ROLES_LIST.Admin), userController.getAllUser)
+    .post(verifyRoles(ROLES_LIST.Admin), userController.createUser)
     .put(verifyRoles(ROLES_LIST.Admin), userController.updateUser)
     .delete(verifyRoles(ROLES_LIST.Admin), userController.deleteUser)
 

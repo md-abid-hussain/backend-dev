@@ -489,3 +489,15 @@
 04-06-2023	16:34:53	b0e3d946-e947-4a19-8198-c731f32ac97f	PUT	undefined	/user/647b1a9f0f803925e35b25d4
 04-06-2023	16:35:00	17c0cb4d-b5c5-47db-a65c-b943bc5c938a	PUT	undefined	/user/
 04-06-2023	16:35:31	d8a4d1d2-bd59-48bf-b11f-dcc81a1fbd57	POST	undefined	/auth
+04-06-2023	20:35:29	e8a23d39-3ba6-4ff3-b999-0f3d10fc66aa	POST	undefined	/auth
+04-06-2023	20:35:41	57c7f5a7-e4b3-42b6-a3d0-2ae043f2a846	GET	undefined	/employees/
+04-06-2023	20:35:50	3fef0a05-3287-4d36-aa70-a3507c2c9e33	GET	undefined	/employees/647b6bad5cad6d718602d577
+04-06-2023	20:36:09	b45c0e59-f524-4635-b08f-759e4624f0a3	POST	undefined	/employees/
+04-06-2023	20:36:31	ce271e9c-df4d-49b7-8764-630cfad7a6db	POST	undefined	/refresh
+04-06-2023	20:36:41	6b2d9ec2-125b-4105-96c5-8d02a02ee0ec	GET	undefined	/employees/
+04-06-2023	20:37:06	92b5cfaf-22fb-4eff-b253-fb76f5a95f88	POST	undefined	/auth
+04-06-2023	20:37:19	3871a7c6-e089-40ae-bdd4-d868b303ce1f	POST	undefined	/employees/
+04-06-2023	20:37:43	ffc5e4b5-2e62-43b1-94d1-97303fcfe159	GET	undefined	/user
+04-06-2023	20:37:53	20f49818-c8b9-412b-8c45-4e033ae90d69	GET	undefined	/user
+04-06-2023	20:46:38	3a87dbf5-c57a-48aa-af39-483ece112f98	POST	undefined	/auth
+04-06-2023	20:46:50	aca79812-7551-418a-8234-5cbf7904377b	POST	undefined	/user/

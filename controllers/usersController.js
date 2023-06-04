@@ -8,6 +8,18 @@ const getAllUser = async (req, res) => {
     res.json(users);
 }
 
+const createUser = async (req, res) => {
+    if (!req?.body?.username || !req?.body?.password)
+        return res.status(400).json({ message: "Username and password are required" })
+
+    const hashedPwd = await bcrypt.hash(req.body.password, 10);
+    const result = await User.create({
+        username: req.body.username,
+        password: hashedPwd
+    })
+    res.json(result)
+}
+
 const updateUser = async (req, res) => {
     if (!req?.body?.id)
         return res.status(400).json({ message: 'ID required' })
@@ -43,4 +55,4 @@ const getUser = async (req, res) => {
     res.json(foundUser)
 }
 
-module.exports = { getAllUser, updateUser, deleteUser, getUser };
+module.exports = { getAllUser, createUser, updateUser, deleteUser, getUser };
