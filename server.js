@@ -50,6 +50,7 @@ app.use('/logout', require('./Routes/logout'))
 
 app.use(verifyJWT)
 app.use('/employees', require('./Routes/api/employees'));
+app.use('/user', require('./Routes/api/users'))
 
 app.all('*', (req, res) => {
     res.status(404)
