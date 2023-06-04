@@ -8,7 +8,7 @@ const verifyJWT = (req, res, next) => {
     const token = authHeader.split(' ')[1];
     jwt.verify(
         token,
-        process.env.REFRESH_SECRET_TOKEN,
+        process.env.ACCESS_SECRET_TOKEN,
         (err, decoded) => {
             if (err) {
                 return res.sendStatus(403);
