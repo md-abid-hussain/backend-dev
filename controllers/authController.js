@@ -18,7 +18,7 @@ const handleLogin = async (req, res) => {
         // Evaluating Password
         const match = await bcrypt.compare(pwd, foundUser.password)
         if (match) {
-            const roles = Object.values(foundUser.roles)
+            const roles = Object.values(foundUser.roles).filter(Boolean)
             // Creating JWT
 
             const accessToken = jwt.sign(
@@ -43,8 +43,8 @@ const handleLogin = async (req, res) => {
             const result = await foundUser.save();
 
             // Remove sameSite and secure option while testing with thunder client
-            res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
-            res.json({ accessToken })
+            res.cookie('jwt', refreshToken, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
+            res.json({ accessToken, roles })
         } else {
             res.sendStatus(401)
         }
