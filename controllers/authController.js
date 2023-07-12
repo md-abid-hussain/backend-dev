@@ -29,13 +29,13 @@ const handleLogin = async (req, res) => {
                     }
                 },
                 process.env.ACCESS_SECRET_TOKEN,
-                { expiresIn: '300s' }
+                { expiresIn: '10s' }
             )
 
             const refreshToken = jwt.sign(
                 { "username": foundUser.username },
                 process.env.REFRESH_SECRET_TOKEN,
-                { expiresIn: '1d' }
+                { expiresIn: '30s' }
             )
 
             // Saving refresh token for current user
@@ -43,8 +43,8 @@ const handleLogin = async (req, res) => {
             const result = await foundUser.save();
 
             // Remove sameSite and secure option while testing with thunder client
-            res.cookie('jwt', refreshToken, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
-            res.json({ accessToken, roles })
+            res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 });
+            res.json({ accessToken })
         } else {
             res.sendStatus(401)
         }
