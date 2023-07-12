@@ -3,15 +3,16 @@ const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const express = require('express');
 const path = require('path');
-const app = express();
 const { logger } = require('./middleware/logEvent');
 const errorHandler = require('./middleware/errorHandler');
 const cookieParser = require('cookie-parser')
 const mongoose = require('mongoose');
 const connectDB = require('./config/dbConnection')
-const PORT = process.env.PORT || 3500;
 const verifyJWT = require('./middleware/verifyJWT');
 const credentials = require('./middleware/credentials')
+
+const app = express();
+const PORT = process.env.PORT || 3500;
 
 // Connect to mongodb
 connectDB();
